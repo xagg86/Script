@@ -1,5 +1,3 @@
-First = -21, 1046, 1156
-Second = 63, 1063, 1157
 repeat task.wait() until game:IsLoaded()
 local Wizard = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 local Window = Wizard:NewWindow("Script Hub")
