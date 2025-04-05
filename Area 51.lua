@@ -1,25 +1,34 @@
+First = -21, 1046, 1156
+Second = 63, 1063, 1157
 repeat task.wait() until game:IsLoaded()
 local Wizard = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 local Window = Wizard:NewWindow("Script Hub")
 local Section = Window:NewSection("Hidden Weapons")
+Section:CreateButton("Safezone", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(624, 983, 750)
+end)
+Section:CreateButton("Hex Spitter", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-584, 1080, 1088)
+end)
+Section:CreateButton("LXW", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15, 860, -43)
+end)
 Section:CreateButton("Ice Crossbow", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(244, 687, 945)
 end)
-Section:CreateButton("LDX", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
+Section:CreateButton("Red Missile Launcher", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-601, 954, 154)
 end)
-Section:CreateButton("First Person", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
+Section:CreateButton("Vulcan", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-601, 951, 156)
 end)
-Section:CreateButton("Unlimited Zoom", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
+local Section = Window:NewSection("Water Gun")
+Section:CreateButton("1 of 3", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-444, 973, -196)
 end)
-Section:CreateButton("Touch Interest", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
+Section:CreateButton("2 of 3", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-282, 973, -92)
 end)
-Section:CreateButton("Enter a HitBox", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
-end)
-Section:CreateButton("Enter a HitBox", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
+Section:CreateButton("3 of 3", function()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-363, 958, -54)
 end)
