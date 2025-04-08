@@ -23,7 +23,7 @@ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFram
 end)
 local Section = Window:NewSection("Hidden Weapons")
 Section:CreateButton("Safezone", function()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(61, 1063, 1160)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(624, 983, 750)
 end)
 Section:CreateButton("HEX Spitter", function()
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-584, 1080, 1088)
