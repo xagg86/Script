@@ -1,0 +1,40 @@
+program Task10_1;
+var x, y, h: real;
+begin
+  writeln('Введите шаг h: ');
+  readln(h);
+  writeln('--- Таблица значений ---');
+  writeln('   x   |    y   ');
+  writeln('------------------------');
+  x := -3;
+while x <= 3.000001 do 
+begin
+y := x * x - 5 * x - 3;
+writeln(x:8:2, ' | ', y:8:2);  
+x := x + h;
+end;
+end.
+
+program Task10_2_Strict;
+var
+  a, b, x, y, h: real;
+  k, count: integer;
+begin
+write('Введите a, b и k: ');
+readln(a, b, k);
+h := (a + b) / (k - 1); 
+writeln('   x   |    y   ');
+writeln('----------------');
+x := a;
+  count := 1;
+while count <= k do
+ begin
+ if x <> 0 then
+begin
+y := 2 + (3 * x * x * x - 7) / x;
+writeln(x:8:2, ' | ', y:8:2);
+end;
+x := x + h;
+count := count + 1;
+end;
+end.
