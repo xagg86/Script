@@ -2040,15 +2040,13 @@ newButton("Run Code",
             TextLabel.Text = "Executing..."
             xpcall(function()
                 local returnvalue
+while wait() do
                 if Remote:IsA("RemoteEvent") or Remote:IsA("UnreliableRemoteEvent") then
                     returnvalue = Remote:FireServer(unpack(selected.args))
-returnvalue = Remote:FireServer(unpack(selected.args))
-returnvalue = Remote:FireServer(unpack(selected.args))
                 elseif Remote:IsA("RemoteFunction") then
                     returnvalue = Remote:InvokeServer(unpack(selected.args))
-returnvalue = Remote:InvokeServer(unpack(selected.args))
-returnvalue = Remote:InvokeServer(unpack(selected.args))
                 end
+end
 
                 TextLabel.Text = ("Executed successfully!\n%s"):format(v2s(returnvalue))
             end,function(err)
