@@ -2035,20 +2035,20 @@ newButton(
 newButton("Run Code",
     function() return "Click to execute code" end,
     function()
-for i,v in next, LogList:GetChildren() do
-            if not v:IsA("UIListLayout") then
         local v = selected and selected.v
         if v then
             TextLabel.Text = "Executing..."
             xpcall(function()
                 local returnvalue
 while wait() do
-                
+                for i,v in next, LogList:GetChildren() do
+            if not v:IsA("UIListLayout") then
                 if v:IsA("RemoteEvent") or v:IsA("UnreliableRemoteEvent") then
                     returnvalue = v:FireServer(unpack(selected.args))
                 elseif Remote:IsA("RemoteFunction") then
                     returnvalue = v:InvokeServer(unpack(selected.args))
                 end
+end
 end
 end
 
