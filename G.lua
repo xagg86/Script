@@ -73,7 +73,7 @@ local setclipboard = setclipboard or toclipboard or set_clipboard or (Clipboard 
     return ErrorPrompt("Attempted to set clipboard: "..(...),true)
 end
 
-local hookmetamethod = hookmetamethod or (makewriteable and makereadonly and getrawmetatable) and function(obj, object, metamethod, string, func, Function)
+local hookmetamethod = hookmetamethod or (makewriteable and makereadonly and getrawmetatable) and function(obj: object, metamethod: string, func: Function)
     local old = getrawmetatable(obj)
 
     if hookfunction then
