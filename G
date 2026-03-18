@@ -129,7 +129,7 @@ local function IsCyclicTable(tbl)
     return SearchTable(tbl)
 end
 
-local function deepclone(args: table, copies: table): table
+local function deepclone(args, table, copies, table)
     local copy = nil
     copies = copies or {}
 
