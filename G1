@@ -2034,17 +2034,33 @@ newButton(
 -- Executes the contents of the codebox through loadstring
 newButton("Run Code",
     function() return "Click to execute code" end,
-while wait() do
     function()
         local Remote = selected and selected.Remote
         if Remote then
             TextLabel.Text = "Executing..."
             xpcall(function()
                 local returnvalue
+while wait() do
                 if Remote:IsA("RemoteEvent") or Remote:IsA("UnreliableRemoteEvent") then
                     returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
+returnvalue = Remote:FireServer(unpack(selected.args))
                 elseif Remote:IsA("RemoteFunction") then
                     returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
+returnvalue = Remote:InvokeServer(unpack(selected.args))
                 end
 end
 
